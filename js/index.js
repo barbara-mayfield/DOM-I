@@ -37,8 +37,9 @@ const siteContent = {
   },
 };
 
-const greatNav = document.querySelectorAll('a');
-console.log(greatNav);
+
+const greatNav1 = document.querySelector('a');
+greatNav1.textContent = 'Product';
 
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
