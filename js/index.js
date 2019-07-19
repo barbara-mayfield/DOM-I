@@ -49,12 +49,26 @@ midImg.setAttribute('src', `img/mid-page-accent.jpg`);
 
 // NAV
 
-const topNav = document.getElementsByTagName('a');
-for (let i = 0; i < topNav.length; i++) {
-  topNav[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+const navItems = document.querySelector('nav');
+
+const anchorTags = document.getElementsByTagName('a');
+for (let i = 0; i < anchorTags.length; i++) {
+  anchorTags[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
 }
-console.log(topNav);
+console.log(anchorTags);
 
 // CTA
 
+const ctaContent = document.getElementsByClassName('cta');
+console.log(ctaContent);
+
 // MAIN
+
+const mainContent = document.getElementsByClassName('main-content');
+console.log(mainContent);
+
+const topContent = document.getElementsByClassName('top-content');
+console.log(topContent);
+
+const bottomContent = document.getElementsByClassName('bottom-content');
+console.log(bottomContent);
