@@ -60,8 +60,14 @@ console.log(anchorTag);
 
 // CTA
 
+const ctaText = document.getElementsByClassName('cta-text');
+console.log(ctaText);
+
 const ctaContent = document.getElementsByClassName('cta');
 console.log(ctaContent);
+
+const ctaContentH1 = document.querySelector('h1');
+ctaContentH1.textContent = siteContent["cta"]['h1'];
 
 // MAIN
 
