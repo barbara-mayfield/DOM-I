@@ -67,16 +67,19 @@ const ctaContent = document.getElementsByClassName('cta');
 console.log(ctaContent);
 
 const ctaContentH1 = document.querySelector('h1');
-ctaContentH1.textContent = siteContent["cta"]['h1'];
+ctaContentH1.innerHTML = siteContent["cta"]['h1'];
 
 const ctaButton = document.querySelector('button');
-ctaButton.textContent = siteContent["cta"]['button'];
+ctaButton.innerHTML = siteContent["cta"]['button'];
 
 // MAIN
 
-const mainContentH4 = document.getElementsByTagName('h4');
-mainContentH4.textContent = siteContent["main-content"]['features-h4'];
-console.log(mainContentH4);
+const featuresTitle = document.querySelector('h4');
+featuresTitle.textContent = siteContent["main-content"]['features-h4'];
+console.log(featuresTitle);
+
+const featuresContent = document.querySelector('p');
+featuresContent.textContent = siteContent["main-content"]['features-content'];
 
 const topContent = document.getElementsByClassName('top-content');
 console.log(topContent);
