@@ -69,10 +69,14 @@ console.log(ctaContent);
 const ctaContentH1 = document.querySelector('h1');
 ctaContentH1.textContent = siteContent["cta"]['h1'];
 
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent["cta"]['button'];
+
 // MAIN
 
-const mainContent = document.getElementsByClassName('main-content');
-console.log(mainContent);
+const mainContentH4 = document.getElementsByTagName('h4');
+mainContentH4.textContent = siteContent["main-content"]['features-h4'];
+console.log(mainContentH4);
 
 const topContent = document.getElementsByClassName('top-content');
 console.log(topContent);
