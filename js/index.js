@@ -50,12 +50,13 @@ midImg.setAttribute('src', `img/mid-page-accent.jpg`);
 // NAV
 
 const navItems = document.querySelector('nav');
+console.log(navItems);
 
-const anchorTags = document.getElementsByTagName('a');
-for (let i = 0; i < anchorTags.length; i++) {
-  anchorTags[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+const anchorTag = document.getElementsByTagName('a');
+for (let i = 0; i < anchorTag.length; i++) {
+  anchorTag[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
 }
-console.log(anchorTags);
+console.log(anchorTag);
 
 // CTA
 
