@@ -37,17 +37,24 @@ const siteContent = {
   },
 };
 
-
-const greatNav1 = document.querySelector('a');
-greatNav1.textContent = 'Product';
-
 // Example: Update the img src for the logo
-const logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+const logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
 
-const ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+const ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 const midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', `img/mid-page-accent.jpg`);
 
+// NAV
+
+const topNav = document.getElementsByTagName('a');
+for (let i = 0; i < topNav.length; i++) {
+  topNav[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+}
+console.log(topNav);
+
+// CTA
+
+// MAIN
