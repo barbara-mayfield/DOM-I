@@ -45,7 +45,7 @@ const ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 const midImg = document.getElementById('middle-img');
-midImg.setAttribute('src', `img/mid-page-accent.jpg`);
+midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 // NAV
 
@@ -56,15 +56,18 @@ navA[2].textContent = siteContent['nav']['nav-item-3'];
 navA[3].textContent = siteContent['nav']['nav-item-4'];
 navA[4].textContent = siteContent['nav']['nav-item-5'];
 navA[5].textContent = siteContent['nav']['nav-item-6'];
-console.log(navA);
+navA.forEach(el => el.style.color = 'green');
+
+
+
 
 // CTA
 
 const ctaText = document.getElementsByClassName('cta-text');
-// console.log(ctaText);
+  // console.log(ctaText);
 
 const ctaContent = document.getElementsByClassName('cta');
-// console.log(ctaContent);
+  // console.log(ctaContent);
 
 const ctaContentH1 = document.querySelector('h1');
 ctaContentH1.textContent = siteContent['cta']['h1'];
@@ -75,7 +78,6 @@ ctaButton.textContent = siteContent['cta']['button'];
 // MAIN
 
 const mainHeaders = document.getElementsByTagName('h4');
-
 mainHeaders[0].textContent = siteContent['main-content']['features-h4'];
 mainHeaders[1].textContent = siteContent['main-content']['about-h4'];
 mainHeaders[2].textContent = siteContent['main-content']['services-h4'];
