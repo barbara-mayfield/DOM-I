@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 const ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
-const midImg = document.getElementById("middle-img");
+const midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', `img/mid-page-accent.jpg`);
 
 // NAV
@@ -54,7 +54,7 @@ console.log(navItems);
 
 const anchorTag = document.getElementsByTagName('a');
 for (let i = 0; i < anchorTag.length; i++) {
-  anchorTag[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+  anchorTag[i].textContent = siteContent['nav'][`nav-item-${i + 1}`];
 }
 console.log(anchorTag);
 
@@ -67,22 +67,44 @@ const ctaContent = document.getElementsByClassName('cta');
 console.log(ctaContent);
 
 const ctaContentH1 = document.querySelector('h1');
-ctaContentH1.innerHTML = siteContent["cta"]['h1'];
+ctaContentH1.textContent = siteContent['cta']['h1'];
 
 const ctaButton = document.querySelector('button');
-ctaButton.innerHTML = siteContent["cta"]['button'];
+ctaButton.textContent = siteContent['cta']['button'];
 
 // MAIN
 
-const featuresTitle = document.querySelector('h4');
-featuresTitle.textContent = siteContent["main-content"]['features-h4'];
-console.log(featuresTitle);
+const mainHeaders = document.getElementsByTagName('h4');
 
-const featuresContent = document.querySelector('p');
-featuresContent.textContent = siteContent["main-content"]['features-content'];
+mainHeaders[0].textContent = siteContent['main-content']['features-h4'];
+mainHeaders[1].textContent = siteContent['main-content']['about-h4'];
+mainHeaders[2].textContent = siteContent['main-content']['services-h4'];
+mainHeaders[3].textContent = siteContent['main-content']['product-h4'];
+mainHeaders[4].textContent = siteContent['main-content']['vision-h4'];
 
-const topContent = document.getElementsByClassName('top-content');
-console.log(topContent);
+console.log(mainHeaders);
 
-const bottomContent = document.getElementsByClassName('bottom-content');
-console.log(bottomContent);
+const mainPara = document.querySelectorAll('.text-content p');
+
+mainPara[0].textContent = siteContent['main-content']['features-content'];
+mainPara[1].textContent = siteContent['main-content']['about-content'];
+mainPara[2].textContent = siteContent['main-content']['services-content'];
+mainPara[3].textContent = siteContent['main-content']['product-content'];
+mainPara[4].textContent = siteContent['main-content']['vision-content'];
+
+console.log(mainPara);
+
+const contactHead = document.querySelector('.contact h4');
+contactHead.textContent = siteContent['contact']['contact-h4'];
+console.log(contactHead);
+
+const contactPara = document.querySelectorAll('.contact p');
+contactPara[0].textContent = siteContent['contact']['address'];
+contactPara[1].textContent = siteContent['contact']['phone'];
+contactPara[2].textContent = siteContent['contact']['email'];
+
+console.log(contactPara);
+
+const footerText = document.querySelector('footer');
+
+footerText.textContent = siteContent['footer']['copyright'];
