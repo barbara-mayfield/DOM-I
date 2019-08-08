@@ -75,7 +75,8 @@ navItems.prepend(careers, navA[0]);
 
 // CTA
 
-const ctaText = document.getElementsByClassName('cta-text');
+const ctaText = document.getElementsByClassName('.cta-text');
+
   // console.log(ctaText);
 
 const ctaContent = document.getElementsByClassName('cta');
@@ -83,9 +84,19 @@ const ctaContent = document.getElementsByClassName('cta');
 
 const ctaContentH1 = document.querySelector('h1');
 ctaContentH1.textContent = siteContent['cta']['h1'];
+ctaContentH1.style.color = '#233D4D';
 
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
+ctaButton.style.borderRadius = '2.5rem';
+ctaButton.onmouseover = function() {
+  this.style.backgroundColor = "#233D4D";
+};
+
+ctaButton.onmouseleave = function() {
+  this.style.backgroundColor = "#FFFFFF";
+};
+
 
 // MAIN
 
