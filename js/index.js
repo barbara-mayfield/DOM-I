@@ -122,6 +122,7 @@ contactHead.textContent = siteContent['contact']['contact-h4'];
 
 const contactPara = document.querySelectorAll('.contact p');
 contactPara[0].textContent = siteContent['contact']['address'];
+contactPara[0].style.width = '9.3rem';
 contactPara[1].textContent = siteContent['contact']['phone'];
 contactPara[2].textContent = siteContent['contact']['email'];
 // console.log(contactPara);
