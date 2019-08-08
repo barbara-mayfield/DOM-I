@@ -50,9 +50,12 @@ midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 // NAV
 
 const navItems = document.querySelector('nav');
-info = document.createElement('a');
-info.textContent = 'Info';
-navItems.appendChild(info);
+console.log(navItems);
+
+faq = document.createElement('a');
+faq.textContent = 'FAQ';
+faq.href = "#";
+navItems.appendChild(faq);
 
 const navA = document.querySelectorAll('nav a');
 navA[0].textContent = siteContent['nav']['nav-item-1'];
@@ -62,6 +65,13 @@ navA[3].textContent = siteContent['nav']['nav-item-4'];
 navA[4].textContent = siteContent['nav']['nav-item-5'];
 navA[5].textContent = siteContent['nav']['nav-item-6'];
 navA.forEach(el => el.style.color = 'green');
+
+careers = document.createElement('a');
+careers.textContent = 'Careers';
+careers.href = '#';
+careers.style.color = 'green';
+console.log(careers);
+navItems.prepend(careers, navA[0]);
 
 // CTA
 
