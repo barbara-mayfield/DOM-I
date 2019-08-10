@@ -82,9 +82,14 @@ const ctaText = document.getElementsByClassName('.cta-text');
 const ctaContent = document.getElementsByClassName('cta');
   // console.log(ctaContent);
 
-const ctaContentH1 = document.querySelector('h1');
-ctaContentH1.textContent = siteContent['cta']['h1'];
+const newLine = "\r\n";
+
+const ctaContentH1 = document.querySelector('.cta-text h1');
+ctaContentH1.textContent = "DOM" + newLine + "Is" + newLine + "Awesome";
+ctaContentH1.style.whiteSpace = "pre";
 ctaContentH1.style.color = '#233D4D';
+
+console.log(ctaContentH1.textContent);
 
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
