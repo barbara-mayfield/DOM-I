@@ -38,5 +38,99 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+const midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+// NAV
+
+const navItems = document.querySelector('nav');
+console.log(navItems);
+
+faq = document.createElement('a');
+faq.textContent = 'FAQ';
+faq.href = "#";
+navItems.appendChild(faq);
+
+const navA = document.querySelectorAll('nav a');
+navA[0].textContent = siteContent['nav']['nav-item-1'];
+navA[1].textContent = siteContent['nav']['nav-item-2'];
+navA[2].textContent = siteContent['nav']['nav-item-3'];
+navA[3].textContent = siteContent['nav']['nav-item-4'];
+navA[4].textContent = siteContent['nav']['nav-item-5'];
+navA[5].textContent = siteContent['nav']['nav-item-6'];
+navA.forEach(el => el.style.color = 'green');
+
+careers = document.createElement('a');
+careers.textContent = 'Careers';
+careers.href = '#';
+careers.style.color = 'green';
+console.log(careers);
+navItems.prepend(careers, navA[0]);
+
+// CTA
+
+const ctaText = document.getElementsByClassName('.cta-text');
+
+  // console.log(ctaText);
+
+const ctaContent = document.getElementsByClassName('cta');
+  // console.log(ctaContent);
+
+const newLine = "\r\n";
+
+const ctaContentH1 = document.querySelector('.cta-text h1');
+ctaContentH1.textContent = "DOM" + newLine + "Is" + newLine + "Awesome";
+ctaContentH1.style.whiteSpace = "pre";
+ctaContentH1.style.color = '#233D4D';
+
+console.log(ctaContentH1.textContent);
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+ctaButton.style.borderRadius = '2.5rem';
+ctaButton.onmouseover = function() {
+  this.style.backgroundColor = "#233D4D";
+};
+
+ctaButton.onmouseleave = function() {
+  this.style.backgroundColor = "#FFFFFF";
+};
+
+
+// MAIN
+
+const mainHeaders = document.getElementsByTagName('h4');
+mainHeaders[0].textContent = siteContent['main-content']['features-h4'];
+mainHeaders[1].textContent = siteContent['main-content']['about-h4'];
+mainHeaders[2].textContent = siteContent['main-content']['services-h4'];
+mainHeaders[3].textContent = siteContent['main-content']['product-h4'];
+mainHeaders[4].textContent = siteContent['main-content']['vision-h4'];
+// console.log(mainHeaders);
+
+const mainPara = document.querySelectorAll('.text-content p');
+mainPara[0].textContent = siteContent['main-content']['features-content'];
+mainPara[1].textContent = siteContent['main-content']['about-content'];
+mainPara[2].textContent = siteContent['main-content']['services-content'];
+mainPara[3].textContent = siteContent['main-content']['product-content'];
+mainPara[4].textContent = siteContent['main-content']['vision-content'];
+// console.log(mainPara);
+
+const contactHead = document.querySelector('.contact h4');
+contactHead.textContent = siteContent['contact']['contact-h4'];
+// console.log(contactHead);
+
+const contactPara = document.querySelectorAll('.contact p');
+contactPara[0].textContent = siteContent['contact']['address'];
+contactPara[0].style.width = '9.3rem';
+contactPara[1].textContent = siteContent['contact']['phone'];
+contactPara[2].textContent = siteContent['contact']['email'];
+// console.log(contactPara);
+
+const footerText = document.querySelector('footer');
+footerText.textContent = siteContent['footer']['copyright'];
